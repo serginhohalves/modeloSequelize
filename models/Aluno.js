@@ -14,10 +14,20 @@ module.exports = (sequelize, DataTypes) => {
         ano_matricula:{
             type: DataTypes.INTEGER
         }
-        
+ 
     },{
         tableName: 'alunos',
         timestamps: false
     })    
+
+    Aluno.associate = (listaDeModelos)=>{
+        Aluno.belongsTo(listaDeModelos.Turma,{
+            foreignKey: 'turma_id',
+            as: 'turma'
+            
+        })
+    }
     return Aluno;
+    
 }
+

@@ -33,7 +33,15 @@
                   <th><%= aluno.nome %></th>
                   <th><%= aluno.sobrenome %></th>
                   <th><%= aluno.ano_matricula %></th>
-                  <th><a href="/users/ver<%= aluno.id %>" class="btn btn-primary">Ver Dados</a></th>
+                  <th>
+                    <a href="/users/ver/<%= aluno.id %>"class="btn btn-primary">Ver Dados</a>
+                    <a href="/users/editar/<%= aluno.id %>" class="btn btn-warning">Editar Dados</a>
+                    <form action="/users/deletar/<%= aluno.id %>?_method=DELETE " method="post">
+                      <button class="btn btn-danger" type="submit">Excluir</button>
+                    </form>
+                  </th>
+                  
+
                 </tr>
               <% }); %>
             </tbody>
