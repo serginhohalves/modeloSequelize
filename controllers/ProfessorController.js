@@ -17,7 +17,7 @@ const ProfessorController = {
             professores: Professores
         })
     },
-        i: async (req,res)=>{
+        id: async (req,res)=>{
             const id = req.params.id;
 
             const professor = await Professor.findAll({
