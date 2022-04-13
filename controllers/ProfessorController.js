@@ -27,12 +27,15 @@ const ProfessorController = {
                 include:[{
                     model: Turma,
                     association: 'Professor_Turmas',
+                    required:false,
                     include:[{
                         model: Cursos,
                         association: 'Turma_Curso',
+                        required:false,
                         include:[{
                             model: Area,
                             association: 'Curso_Area',
+                            required:false
                         }]
 
                     }]
