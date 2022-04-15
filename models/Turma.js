@@ -30,10 +30,10 @@ module.exports = (sequelize, DataTypes) => {
             as: 'Turma_Curso'
 
         })
-        Turma.hasMany(listaDeModelos.Aluno, {
-            foreignKey: 'turma_id',
-            as: 'Turma_Alunos'
-        })
+//         Turma.hasMany(listaDeModelos.Aluno, {
+//             foreignKey: 'turma_id',
+//             as: 'Turma_Alunos'
+//         })
 
     }
 
