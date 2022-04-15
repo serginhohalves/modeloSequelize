@@ -20,13 +20,13 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false
     })    
 
-    Aluno.associate = (listaDeModelos)=>{
-        Aluno.belongsTo(listaDeModelos.Turma,{
-            foreignKey: 'turma_id',
-            as: 'turma'
+//     Aluno.associate = (listaDeModelos)=>{
+//         Aluno.belongsTo(listaDeModelos.Turma,{
+//             foreignKey: 'turma_id',
+//             as: 'turma'
             
-        })
-    }
+//         })
+//     }
     return Aluno;
     
 }
